@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #14171b;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.phone {
+  width: 402px;
+  height: 100vh;
+  overflow: hidden;
+  background: #fbf1e7;
+  color: #373737;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 127px;
+  background: #e7cfba;
+  border-bottom: 1px solid #d8c6b6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 33px;
+  flex-shrink: 0;
+}
+
+.status-dot{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #056b1e;
+  margin-top: 40px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #056b1e;
+}
+
+.profile-icon {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 3px solid #1d1d1d;
+  background: radial-gradient(circle at 50% 34%, #d8d8d8 0 12px, transparent 13px),
+    radial-gradient(ellipse at 50% 82%, #d8d8d8 0 16px, transparent 17px),
+    #5f5f5f;
+  margin-top: 40px;
+}
+
+.feed {
+  padding: 18px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  background: #e7cfba;
+  border-radius: 20px;
+  padding: 16px 11px 14px;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.card-head strong {
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-right: auto;
+}
+
+.follow {
+  border: 0;
+  width: 95px;
+  height: 39px;
+  border-radius: 20px;
+  background: #729a81;
+  color: #373737;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+strong{
+  font-size: 20px;
+}
+.image-wrap {
+  margin-top: 10px;
+  border-radius: 25px;
+  background: rgba(114, 154, 129, 0.2);
+  height: 303px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.recipe-photo {
+  width: 292px;
+  height: 292px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #262b30 0 76%, #1f2328 100%);
+}
+
+.metrics {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card.crop {
+  padding-bottom: 0;
+}
+
+.image-wrap.partial {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

@@ -1,0 +1,26 @@
+@import url("./common.css");
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.long {
+  width: 84px;
+}
+
+.scribble {
+  width: 120px;
+  height: 20px;
+  margin: 4px auto 8px;
+  border-bottom: 2px solid #4d453c;
+}
+
+.deep {
+  height: 122px;
+  background: #d9b392;
+  border-top-left-radius: 50% 30px;
+  border-top-right-radius: 50% 30px;
+}

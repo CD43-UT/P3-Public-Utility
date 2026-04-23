@@ -1,0 +1,36 @@
+@import url("./common.css");
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 12px;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  padding: 8px 10px;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+article .pill {
+  width: 180px;
+}
+
+.bottom-band {
+  height: 110px;
+  background: #e2b48f;
+  border-top-left-radius: 50% 24px;
+  border-top-right-radius: 50% 24px;
+}

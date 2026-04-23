@@ -1,0 +1,32 @@
+@import url("./common.css");
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.long {
+  width: 170px;
+}
+
+nav {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+  background: #f5efe9;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.bottom-band {
+  height: 130px;
+  background: #d8b49b;
+}

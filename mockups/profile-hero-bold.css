@@ -1,0 +1,17 @@
+@import url("./common.css");
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.long {
+  width: 170px;
+}
+
+.bottom-band {
+  height: 165px;
+  background: #158578;
+}

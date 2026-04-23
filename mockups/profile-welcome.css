@@ -1,0 +1,49 @@
+@import url("./common.css");
+
+.center {
+  height: 200%;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 80%;
+  height: 40%;
+  background: #d9c7b8;
+  display: grid;
+  gap: 20px;
+  place-content: center;
+  Margin:0px;
+  border-radius:10px;
+}
+
+.mid {
+  display:flex;
+  width: 300px;
+  height:50px;
+  justify-self: center;
+  align-items: center;
+  color:#fff;
+  padding:20px;
+}
+
+.btn-row {
+  width:80%;
+  height:20%;
+  display: flex;
+  gap: 8px;
+  margin-top: -450px;
+  flex-direction:row;
+}
+
+button {
+  height: 100%;
+  width:80%;
+  border-radius:10px;
+  background: #4e8d70;
+  color: #fff;
+  font-size: 20px;
+  Border:none;
+  cursor: pointer;
+}
+

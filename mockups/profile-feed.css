@@ -1,0 +1,30 @@
+@import url("./common.css");
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.long {
+  width: 170px;
+}
+
+.img {
+  justify-content: space-between;
+}
+
+.img span {
+  width: 64px;
+  height: 54px;
+  border-radius: 6px;
+  background: #d7d7d7;
+}
+
+.bottom-band {
+  height: 110px;
+  background: #e2b48f;
+  border-top-left-radius: 50% 24px;
+  border-top-right-radius: 50% 24px;
+}
