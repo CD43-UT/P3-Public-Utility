@@ -81,11 +81,16 @@ body {
   gap: 14px;
 }
 
-.card-head  {
+.card-head strong {
+  flex: 1;
+  min-width: 0;
   font-size: 20px;
   line-height: 1;
   letter-spacing: -0.02em;
-  margin-right: auto;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .follow {
@@ -98,9 +103,6 @@ body {
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.01em;
-}
-strong{
-  font-size: 20px;
 }
 .image-wrap {
   margin-top: 10px;

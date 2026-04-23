@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f4fd"/>
+      <stop offset="100%" stop-color="#e4e7fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect x="300" y="500" width="600" height="210" rx="105" fill="#faf4eb" stroke="#cbbba7" stroke-width="10"/>
+  <rect x="325" y="515" width="110" height="70" rx="35" fill="#ff7d6b"/>
+  <rect x="445" y="515" width="110" height="70" rx="35" fill="#ffa15a"/>
+  <rect x="565" y="515" width="110" height="70" rx="35" fill="#ffe466"/>
+  <rect x="685" y="515" width="110" height="70" rx="35" fill="#7bcf8f"/>
+  <rect x="805" y="515" width="70" height="70" rx="35" fill="#63a4f4"/>
+  <circle cx="600" cy="640" r="70" fill="#f2f0ed" stroke="#bfb1a1" stroke-width="8"/>
+  <text x="600" y="930" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="74" fill="#4f5687">Rainbow Roll</text>
+</svg>

@@ -17,7 +17,7 @@
         <article class="card">
           <header class="card-head">
             <span class="avatar" aria-hidden="true"></span>
-            <strong>username</strong>
+            <strong>Urban Bites87</strong>
             <button type="button" class="follow">Follow</button>
           </header>
 
@@ -35,28 +35,129 @@
           <p>Description of the post / recipie</p>
         </article>
 
-        <article class="card">
-          <header class="card-head">
-            <span class="avatar" aria-hidden="true"></span>
-            <strong>username</strong>
-            <button type="button" class="follow">Follow</button>
-          </header>
-
-          <div class="image-wrap">
-            <div class="recipe-photo"></div>
-          </div>
-
-          <div class="metrics" aria-label="Post actions and counts">
-            <span>♡ 1.5K</span>
-            <span>✈ 1.5K</span>
-            <span>🔖 1.5K</span>
-            <span>▯</span>
-          </div>
-
-          <p>Description of the post / recipie</p>
-        </article>
-      
       </main>
     </section>
+    <script>
+      const feed = document.querySelector(".feed");
+      const seedCards = [...feed.querySelectorAll(".card")];
+      const PAGE_SIZE = 4;
+      const THRESHOLD = 180;
+      const FALLBACK_IMAGE = "./images/sushi/placeholder.svg";
+      const USER_PREFIXES = ["crispy", "cozy", "spice", "green", "golden", "fresh", "zesty", "urban"];
+      const USER_SUFFIXES = ["whisk", "plate", "bites", "pantry", "kitchen", "baker", "chef", "simmer"];
+      const SUSHI_POSTS = [
+        {
+          image: "./images/sushi/salmon-nigiri.svg",
+          description: "Salmon nigiri with lightly seasoned rice and a clean, buttery finish.",
+        },
+        {
+          image: "./images/sushi/tuna-maki.svg",
+          description: "Classic tuna maki roll with crisp nori and a balanced soy-wasabi bite.",
+        },
+        {
+          image: "./images/sushi/rainbow-roll.svg",
+          description: "Rainbow roll layered with fresh fish, avocado, and bright citrus notes.",
+        },
+        {
+          image: "./images/sushi/shrimp-tempura-roll.svg",
+          description: "Shrimp tempura roll with crunchy texture and a sweet-savory drizzle.",
+        },
+        {
+          image: "./images/sushi/spicy-tuna.svg",
+          description: "Spicy tuna roll with chili heat, cucumber crunch, and toasted sesame.",
+        },
+        {
+          image: "./images/sushi/sushi-platter.svg",
+          description: "Assorted sushi platter featuring nigiri, maki, and pickled ginger.",
+        },
+      ];
+      let loading = false;
+      let sushiIndex = 0;
+
+      function randomItem(list) {
+        return list[Math.floor(Math.random() * list.length)];
+      }
+
+      function generateUsername() {
+        const num = Math.floor(Math.random() * 900 + 100);
+        return `${randomItem(USER_PREFIXES)} ${randomItem(USER_SUFFIXES)}${num}`;
+      }
+
+      function nextSushiPost() {
+        const post = SUSHI_POSTS[sushiIndex % SUSHI_POSTS.length];
+        sushiIndex += 1;
+        return post;
+      }
+
+      function setRecipePhoto(photoEl, imagePath) {
+        if (!photoEl) return;
+
+        photoEl.style.backgroundSize = "cover";
+        photoEl.style.backgroundPosition = "center";
+        photoEl.style.backgroundRepeat = "no-repeat";
+        photoEl.style.borderRadius = "50%";
+
+        const img = new Image();
+        img.onload = () => {
+          photoEl.style.backgroundImage = `url("${imagePath}")`;
+        };
+        img.onerror = () => {
+          photoEl.style.backgroundImage = `url("${FALLBACK_IMAGE}")`;
+        };
+        img.src = imagePath || FALLBACK_IMAGE;
+      }
+
+      function applyPostContent(card) {
+        const name = card.querySelector("strong");
+        const desc = card.querySelector("p");
+        const followButton = card.querySelector(".follow");
+        const photo = card.querySelector(".recipe-photo");
+        const post = nextSushiPost();
+
+        if (name) name.textContent = generateUsername();
+        if (desc) desc.textContent = post.description;
+        if (followButton) followButton.textContent = "Follow";
+        setRecipePhoto(photo, post.image);
+      }
+
+      function createCardFrom(seed) {
+        const card = seed.cloneNode(true);
+        applyPostContent(card);
+        return card;
+      }
+
+      function appendMoreCards() {
+        if (loading || seedCards.length === 0) return Promise.resolve();
+        loading = true;
+
+        // Simulate network latency to mimic real feed behavior.
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            for (let i = 0; i < PAGE_SIZE; i += 1) {
+              const seed = seedCards[i % seedCards.length];
+              feed.appendChild(createCardFrom(seed));
+            }
+            loading = false;
+            resolve();
+          }, 250);
+        });
+      }
+
+      feed.addEventListener("scroll", () => {
+        const nearBottom =
+          feed.scrollTop + feed.clientHeight >= feed.scrollHeight - THRESHOLD;
+
+        if (nearBottom) appendMoreCards();
+      });
+
+      async function ensureScrollableFeed() {
+        while (feed.scrollHeight <= feed.clientHeight + THRESHOLD && !loading) {
+          await appendMoreCards();
+        }
+      }
+
+      seedCards.forEach(applyPostContent);
+      ensureScrollableFeed();
+    </script>
   </body>
 </html>

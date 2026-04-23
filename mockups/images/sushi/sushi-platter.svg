@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef4ff"/>
+      <stop offset="100%" stop-color="#dce8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <ellipse cx="600" cy="620" rx="360" ry="220" fill="#ffffff" stroke="#bdc8d8" stroke-width="10"/>
+  <rect x="360" y="560" width="140" height="70" rx="35" fill="#ff8e73"/>
+  <rect x="530" y="560" width="140" height="70" rx="35" fill="#ffd166"/>
+  <rect x="700" y="560" width="140" height="70" rx="35" fill="#7dcf9b"/>
+  <circle cx="460" cy="700" r="55" fill="#1f2a25"/>
+  <circle cx="460" cy="700" r="38" fill="#faf3ea"/>
+  <circle cx="460" cy="700" r="20" fill="#c24f4f"/>
+  <circle cx="600" cy="700" r="55" fill="#1f2a25"/>
+  <circle cx="600" cy="700" r="38" fill="#faf3ea"/>
+  <circle cx="600" cy="700" r="20" fill="#4da47a"/>
+  <circle cx="740" cy="700" r="55" fill="#1f2a25"/>
+  <circle cx="740" cy="700" r="38" fill="#faf3ea"/>
+  <circle cx="740" cy="700" r="20" fill="#d79b55"/>
+  <text x="600" y="930" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="74" fill="#4c5d7a">Sushi Platter</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff8ea"/>
+      <stop offset="100%" stop-color="#ffe9bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect x="300" y="510" width="600" height="190" rx="95" fill="#f8f0e6" stroke="#cbb8a3" stroke-width="10"/>
+  <path d="M380 600 C430 510, 520 510, 560 600 C520 690, 430 690, 380 600 Z" fill="#f2b24d"/>
+  <path d="M520 600 C570 510, 660 510, 700 600 C660 690, 570 690, 520 600 Z" fill="#f2b24d"/>
+  <path d="M660 600 C710 510, 800 510, 840 600 C800 690, 710 690, 660 600 Z" fill="#f2b24d"/>
+  <circle cx="910" cy="620" r="12" fill="#d0a35b"/>
+  <circle cx="875" cy="570" r="12" fill="#d0a35b"/>
+  <circle cx="860" cy="655" r="12" fill="#d0a35b"/>
+  <text x="600" y="930" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="68" fill="#7b6030">Shrimp Tempura Roll</text>
+</svg>
